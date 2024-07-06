@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World Button</title>
+</head>
+<body>
+  <button id="helloButton">Click me</button>
+  <script>
+    document.getElementById('helloButton').addEventListener('click', () => {
+      fetch('http://<Your-Lightsail-Instance-IP>:3000/hello')
+        .then(response => response.text())
+        .then(data => {
+          alert(data);
+        })
+        .catch(error => console.error('Error:', error));
+    });
+  </script>
+</body>
+</html>
