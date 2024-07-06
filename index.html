@@ -9,7 +9,7 @@
   <button id="helloButton">Click me</button>
   <script>
     document.getElementById('helloButton').addEventListener('click', () => {
-      fetch('http://<Your-Lightsail-Instance-IP>:3000/hello')
+      fetch('http://52.78.202.73:3000/hello')
         .then(response => response.text())
         .then(data => {
           alert(data);
